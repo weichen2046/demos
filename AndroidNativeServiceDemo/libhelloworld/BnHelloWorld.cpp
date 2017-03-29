@@ -25,14 +25,4 @@ status_t BnHelloWorld::onTransact(uint32_t code, const Parcel& data, Parcel* rep
     }
 }
 
-void BnHelloWorld::helloWorld()
-{
-    ALOGD("server side helloWorld called");
-}
-
-void BnHelloWorld::worldHello()
-{
-    ALOGD("server side worldHello called");
-}
-
-} // end namespace android
+} // end of namespace android

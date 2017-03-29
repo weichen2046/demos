@@ -2,7 +2,7 @@
 #include <binder/ProcessState.h>
 #include <binder/IServiceManager.h>
 
-#include "../libhelloworld/BnHelloWorld.h"
+#include "../libhelloworld/HelloWorld.h"
 
 using namespace android;
 
@@ -12,10 +12,7 @@ int main(int argc, char** argv){
     sp<IServiceManager> sm = defaultServiceManager();
 
     // publish helloworld service
-    // NOTE: service name does not have to be the same with service descriptor.
-    // descriptor of helloword service defined in IHelloWorld.h as "com.example.IHelloWorld",
-    // service name of helloworld service can be defined as "helloworld" here.
-    sm->addService(String16("helloworld"), new BnHelloWorld());
+    HelloWorld::instantiate();
 
     // publish other service
     

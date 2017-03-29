@@ -9,11 +9,8 @@ class BnHelloWorld : public BnInterface<IHelloWorld>
 {
 public:
     virtual status_t onTransact(uint32_t code, const Parcel& data, Parcel* reply, uint32_t flags=0);
-
-    virtual void helloWorld();
-    virtual void worldHello();
 };
 
-} // end namespace android
+} // end of namespace android
 
 #endif

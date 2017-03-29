@@ -4,7 +4,8 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES:= \
 	IHelloWorld.cpp \
 	BpHelloWorld.cpp \
-	BnHelloWorld.cpp
+	BnHelloWorld.cpp \
+	HelloWorld.cpp
 
 LOCAL_SHARED_LIBRARIES := \
 	liblog \
