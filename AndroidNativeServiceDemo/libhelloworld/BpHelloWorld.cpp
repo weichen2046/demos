@@ -18,7 +18,7 @@ void BpHelloWorld::helloWorld()
     // TODO: write parameter data here
 
     // send transaction to server
-    remote()->transact(HELLO_WORLD_TRANSACTION, data, &reply);
+    remote()->transact(HELLO_WORLD_TRANSACTION, data, &reply, IBinder::FLAG_ONEWAY);
 }
 
 void BpHelloWorld::worldHello()
